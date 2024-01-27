@@ -4,7 +4,9 @@ const urlRoute = require("./routes/url");
 const { connecttoMongo } = require("./connect");
 const URL = require("./models/url");
 const app = express();
-const PORT = 8000;
+
+const port = process.env.PORT || 8000;
+
 
 connecttoMongo(process.env.DB_LINK, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
