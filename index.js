@@ -5,7 +5,7 @@ const { connecttoMongo } = require("./connect");
 const URL = require("./models/url");
 const app = express();
 
-const port = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 
 
 connecttoMongo(process.env.DB_LINK, { useNewUrlParser: true, useUnifiedTopology: true })
